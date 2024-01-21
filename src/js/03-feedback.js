@@ -13,7 +13,7 @@ let feedbackFormState = data || {};
 fillForm();
 
 function handlerInput({ target }) {
-  feedbackFormState[target.name] = target.value;
+  feedbackFormState[target.name] = target.value.trim();
 
   localStorage.setItem(
     'feedback-form-state',
